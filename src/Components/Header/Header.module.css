@@ -1,0 +1,101 @@
+.header_wrapper {
+    margin-top: 160px;
+    padding: 0;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 480px;
+    padding: 60px;
+    background-image: url('./../../assets/landscape-Panorama-02.jpg');
+    background-repeat: no-repeat;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: top;
+    z-index: 1;
+    position: relative;
+    animation: anim_change_Img 5s linear infinite alternate;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.imageContainer::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000033;
+    border-radius: 18px;
+    z-index: -1;
+
+}
+
+@keyframes anim_change_Img {
+    0% {
+        background-image: url('./../../assets/landscape-Panorama-02.jpg');
+    }
+
+    100% {
+        background-image: url('./../../assets/landscape-Panorama-03.jpg');
+
+    }
+}
+
+.imageContainer h2 {
+    font-size: 48px;
+    line-height: 60px;
+    color: #fff;
+}
+
+.swiper {
+    width: 80% !important;
+    margin-top: -80px;
+}
+
+.DestinationCard {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.DestinationCard img {
+    width: 100%;
+    height: 100%;
+}
+
+/* media query */
+
+@media screen and (max-width: 580px) {
+    .imageContainer {
+        height: 300px;
+        padding: 30px;
+    }
+
+    .imageContainer h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .imageContainer h2 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .imageContainer {
+        height: 400px;
+        padding: 30px;
+    }
+
+    .imageContainer h2 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
