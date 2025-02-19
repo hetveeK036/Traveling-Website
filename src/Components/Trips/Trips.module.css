@@ -1,0 +1,105 @@
+.trip_wrapper {
+    background-color: #f9f9f9;
+    padding: 80px 13% !important;
+}
+
+.tripCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.tripCards .card {
+    width: 100%;
+    height: 420px;
+    box-shadow: 4px 4px 4px #0000001a;
+    border-radius: 16px;
+    border: 0.8px solid #83838333;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.tripCards .card:hover {
+    box-shadow: 2px 2px 2px #d85f52;
+}
+
+.tripCards .card img {
+    width: 100%;
+    height: 210px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+}
+
+.tripCards .card .tripContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 28px;
+    height: 50%;
+    padding-top: 15px;
+    justify-content: space-between;
+
+}
+
+.pricing,
+.TripDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.rating i {
+    color: #e74c3c;
+}
+
+.pricing .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e74c3c;
+}
+
+@media screen and (max-width: 1400px) {
+    .tripCards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .tripCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tripCards .card img {
+        height: 250px;
+    }
+
+    .tripCards .card {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tripCards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tripCards .card img {
+        height: 280px;
+    }
+
+    .tripCards .card {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .trip_wrapper {
+        padding: 40px 10% !important;
+    }
+
+}
