@@ -1,0 +1,167 @@
+.memories_wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) !important;
+
+    grid-template-areas:
+        "Grid-card-1 Grid-card-1 Grid-card-2 Grid-card-2 Grid-card-4 Grid-card-4"
+        "Grid-card-1 Grid-card-1 Grid-card-3 Grid-card-3 Grid-card-4 Grid-card-4"
+        "Grid-card-7 Grid-card-7 Grid-card-6 Grid-card-6 Grid-card-4 Grid-card-4"
+        "Grid-card-7 Grid-card-7 Grid-card-6 Grid-card-6 Grid-card-5 Grid-card-5"
+    ;
+    gap: 0 !important;
+}
+
+.memories_wrapper .memoriesCard {
+    width: auto;
+    height: 280px;
+    margin: 20px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.memories_wrapper .memoriesCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: .6s;
+}
+
+.memories_wrapper .memoriesCard:hover img {
+    filter: grayscale(40%) blur(2px);
+    transform: scale(1.1);
+    -webkit-filter: grayscale(40%) blur(2px);
+}
+
+.memories_wrapper .memoriesCard .content {
+    position: absolute;
+    top: -380px;
+    left: 25px;
+    transition: .6s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    z-index: 9;
+}
+
+.memories_wrapper .memoriesCard:hover:after {
+    opacity: 1;
+}
+
+.memories_wrapper .memoriesCard::after {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: .6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
+}
+
+
+.memories_wrapper .memoriesCard:hover .content {
+    top: 0%;
+}
+
+.memories_wrapper .memoriesCard .content h3 {
+    font-size: 28px;
+    color: #e74c3c;
+    /* color: rgb(225, 167, 44); */
+}
+
+.memories_wrapper .memoriesCard:nth-child(4) .content h3 {
+    font-family: monospace;
+    background: #121FCF;
+    background: linear-gradient(to left, rgb(255, 75, 55), rgb(156, 16, 0));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.memories_wrapper .memoriesCard .content a {
+    color: #fff;
+}
+
+.memories_wrapper .memoriesCard:nth-child(1) {
+    grid-area: Grid-card-1;
+    height: auto;
+}
+
+.memories_wrapper .memoriesCard:nth-child(2) {
+    grid-area: Grid-card-2;
+    height: 250px;
+}
+
+.memories_wrapper .memoriesCard:nth-child(3) {
+    grid-area: Grid-card-3;
+    height: 250px;
+
+}
+
+.memories_wrapper .memoriesCard:nth-child(4) {
+    grid-area: Grid-card-4;
+    height: 550px;
+
+}
+
+.memories_wrapper .memoriesCard:nth-child(5) {
+    grid-area: Grid-card-5;
+}
+
+.memories_wrapper .memoriesCard:nth-child(6) {
+    grid-area: Grid-card-6;
+}
+
+.memories_wrapper .memoriesCard:nth-child(7) {
+    grid-area: Grid-card-7;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .memories_wrapper .memoriesCard .content h3 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .memories_wrapper .memoriesCard .content h3 {
+        font-size: 22px;
+    }
+
+    .memories_wrapper {
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        grid-template-areas:
+            "Grid-card-1 Grid-card-1 "
+            "Grid-card-2 Grid-card-2 "
+            "Grid-card-3 Grid-card-3 "
+            "Grid-card-4 Grid-card-4 "
+            "Grid-card-5 Grid-card-5 "
+            "Grid-card-6 Grid-card-6 "
+            "Grid-card-7 Grid-card-7 "
+        ;
+    }
+
+    .memories_wrapper .memoriesCard {
+        width: 100%;
+        height: 400px !important;
+        margin: 0px;
+        margin-block: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .memories_wrapper {
+        padding: 60px 2% !important;
+    }
+}

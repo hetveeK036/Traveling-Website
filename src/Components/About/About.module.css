@@ -107,3 +107,38 @@
 
     }
 }
+
+@media screen and (max-width: 430px) {
+    .about_Image {
+        width: 100%;
+    }
+
+    .about_wrapper .aboutContent h2 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-top: 10px;
+    }
+
+    .aboutContent {
+        padding: 50px 10px;
+    }
+
+    .about {
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .about_wrapper {
+        padding: 60px 2% !important;
+    }
+
+    .about_wrapper .aboutContent {
+        padding: 25px 12px;
+    }
+
+    .about {
+        padding: 20px 10px;
+    }
+}

@@ -85,3 +85,17 @@
         font-size: 22px;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .search_wrapper {
+        padding: 60px 8% !important;
+    }
+
+    .cards .card {
+        gap: 20px;
+    }
+
+    .cards .card h3 {
+        font-size: 20px;
+    }
+}

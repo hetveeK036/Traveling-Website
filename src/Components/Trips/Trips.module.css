@@ -103,3 +103,28 @@
     }
 
 }
+
+@media screen and (max-width: 320px) {
+    .trip_wrapper {
+        padding: 40px 8% !important;
+    }
+
+    .tripCards .card {
+        height: 460px;
+    }
+
+    .tripCards {
+        width: 270px;
+    }
+
+    .pricing {
+        gap: 20px;
+    }
+
+    .tripCards .card .tripContent {
+        padding: 20px;
+        height: 40%;
+        justify-content: space-evenly;
+    }
+
+}
